@@ -7,6 +7,7 @@ class BooksController
 {
 	//Returns view whit all books
    public function index() {
+		echo "хелоу ворлд";
    		$book = new \App\Models\Book();
    		$books = $book->getAll();
         return require_once( dirname(__DIR__).'../views/index.php');//retrurn some view whith data;
