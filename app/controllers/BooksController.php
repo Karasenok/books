@@ -16,7 +16,7 @@ class BooksController
 
     // Returns the book creation form
 	public function create() {
-
+	return require_once( dirname(__DIR__).'../views/create.php');
 	}
 
 	// Method that saves the object to db
