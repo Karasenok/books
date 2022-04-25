@@ -16,10 +16,12 @@
             <label for="date">Год:</label>
             <input type="date" name="date">
             <br></br>
-            <label for="image">Картинка:</label>
-            <input type="text" name="image">
+            <label for="image">Обложка:</label>
+            <form enctype="multipart/form-data" method="post">
+            <p><input type="file" name="userfile">
             <br></br>
             <button type="submit">Отправить</button>
-            
+
       </form>  
 </body>
+//Потому что я пуджжжжж пуджжжжж пуджжжжж пуджжжжж пуджжжжж пуджжжжж
