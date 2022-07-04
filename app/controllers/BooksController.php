@@ -5,7 +5,7 @@ namespace App\Controllers;
 
 class BooksController
 {
-	//Returns view whit all books
+	//Returns view with all books
    public function index() {
    		$book = new \App\Models\Book();
    		$books = $book->getAll();

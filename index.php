@@ -14,7 +14,7 @@ switch ($request) {
     case '' :
         echo "Домашняя страница, которая не используется у нас, вот дела";
         break;
-    case '/books' :
+    case '/books/' :
       	$isPost ? $controller->store() : $controller->index();
         break;
     case '/books/create' :
