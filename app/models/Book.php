@@ -47,8 +47,14 @@ class Book
 
     // }
 
-    // delete(){
-
-    // }
+    public function delete(){
+        $conn = new \App\Db\Connection();
+        $pdo = $conn->openConnection();
+        $id = $_POST['id'];
+        $sql = "DELETE FROM books WHERE id = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue('id', $id);
+        $stmt->execute();
+    }
 
 }
