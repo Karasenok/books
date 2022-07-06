@@ -24,6 +24,10 @@ switch ($request) {
         $controller->store($_POST);
         header("Location: /books/");
         break;
+    case '/books/remove' :
+        $controller->remove($_POST['id']);
+        header("Location: /books/");
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/views/404.php';

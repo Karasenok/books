@@ -33,8 +33,10 @@ class BooksController
 	}
 
 	//Delete book by id
-	public function del($id) {
-
+	public function remove($id) {
+        $book = new Book();
+        $book->id = $id;
+        $book->delete();
 	}
 
 }
