@@ -2,13 +2,11 @@
 namespace App\Db;
 
 Class Connection {
-    private  $server = "mysql:host=127.0.0.1;dbname=black_books";
-    private  $user = "root";
-    private  $pass = "";
+    private  $server = "mysql:host=127.0.0.1;dbname=my_db";
+    private  $user = "dev";
+    private  $pass = "dev";
     private $options  = array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,\PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,);
     protected $con;
-	public $test = 'hui';
-	public $name = '';
  
     public function openConnection(){
     	try{

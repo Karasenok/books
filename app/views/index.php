@@ -30,7 +30,7 @@
                         </td>
                         <td>
                             <?php
-                                echo "{$book['fk_autor']} <br>";
+                                echo "{$book['fk_author']} <br>";
                             ?>
                         </td>
                         <td>
