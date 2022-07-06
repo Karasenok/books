@@ -15,11 +15,15 @@ switch ($request) {
         echo "Домашняя страница, которая не используется у нас, вот дела";
         break;
     case '/books/' :
-      	$isPost ? $controller->store() : $controller->index();
+        $controller->index();
         break;
     case '/books/create' :
-    	$controller->create();
-   		break;
+        $controller->create();
+        break;
+    case '/books/store' :
+        $controller->store($_POST);
+        header("Location: /books/");
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/views/404.php';
