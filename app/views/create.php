@@ -13,19 +13,25 @@
     </label>
     <br><br>
     <label>
-        Автор книги:
-        <input type="text" name="author">
+        Год издания книги:
+        <input type="date" name="book_year">
     </label>
     <br><br>
-    <label>Год:
-        <input type="date" name="date">
+    <label>
+        Автор книги:
+        <input type="text" name="author_name">
+    </label>
+    <br><br>
+    <label>
+        Год рождения автора:
+        <input type="date" name="author_year">
     </label>
     <br><br>
     <label>Обложка:
         <input type="text" name="userfile">
     </label>
     <br><br>
-    <button type="submit" >Отправить</button>
+    <button type="submit">Отправить</button>
 
 </form>
 </body>

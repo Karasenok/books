@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 //Simple controller class that controls all the actions in our app!
 
+use App\Models\Author;
 use App\Models\Book;
 
 class BooksController
@@ -20,23 +21,28 @@ class BooksController
 	return require_once( dirname(__DIR__).'../views/create.php');
 	}
 
-	// Method that saves the object to db
-	public function store($post) {
-       $book = new Book();
-       $book->name = $post['book_name'];
-       $book->fk_author = $post['author'];
-       $book->year = $post['date'];
-       $book->image = $post['userfile'];;
-       $book->save();
+    // Method that saves the object to db
+    public function store($post)
+    {
+        $author = new Author();
+        $author->name = $post['author_name'];
+        $author->year = $post['author_year'];
+        $authorId = $author->save();
 
+        $book = new Book();
+        $book->name = $post['book_name'];
+        $book->fk_author = $authorId;
+        $book->year = $post['book_year'];
+        $book->image = $post['userfile'];;
+        $book->save();
+    }
 
-	}
-
-	//Delete book by id
-	public function remove($id) {
+    //Delete book by id
+    public function remove($id)
+    {
         $book = new Book();
         $book->id = $id;
         $book->delete();
-	}
+    }
 
 }

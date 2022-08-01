@@ -19,36 +19,33 @@
                 </tr>
                 <?php foreach ($books as $book): ?>
                     <tr>
-<!--                        <td>-->
-<!--                            --><?php
-//                                echo "{$book['id']} <br>";
-//                            ?>
-<!--                        </td>-->
                         <td>
                             <?php
-                                echo "{$book['name']} <br>";
+                                echo "{$book['book_name']} <br>";
                         ?>
                         </td>
                         <td>
                             <?php
-                                echo "{$book['fk_author']} <br>";
+                                echo "{$book['author_name']} <br>";
                             ?>
                         </td>
                         <td>
                             <?php
-                                echo "{$book['year']} <br>";
+                                echo "{$book['book_year']} <br>";
                             ?>
                         </td>
                         <td>
-                            <img src="<?php 
-                                        echo "{$book['image']} <br>";
+                            <img src="<?php
+                                        echo "{$book['book_image']}";
+
                                       ?>"
                                     width="100" height="150">
+
                            
                         </td>
                         <td>
                             <form action="/books/remove" method="POST">
-                                <input value="<?php echo $book['id'] ?>" type="hidden" name="id">
+                                <input value="<?php echo $book['book_id'] ?>" type="hidden" name="id">
                                 <button type="submit">Удалить</button>
                             </form>
                         </td>
